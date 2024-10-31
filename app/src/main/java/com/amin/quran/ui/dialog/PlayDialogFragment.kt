@@ -83,10 +83,10 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
                 }
             }
             imgGoAfter.setOnClickListener {
-                exoPlayer.duration + 5000
+                exoPlayer.seekTo(exoPlayer.currentPosition + 5000)
             }
             imgGoBefore.setOnClickListener {
-                exoPlayer.duration - 5000
+                exoPlayer.seekTo(exoPlayer.currentPosition - 5000)
             }
             // Sync slider with playback progress
             sliderMain.addOnChangeListener { slider, value, fromUser ->

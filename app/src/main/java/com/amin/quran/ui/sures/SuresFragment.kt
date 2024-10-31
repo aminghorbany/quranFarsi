@@ -40,9 +40,9 @@ class SuresFragment : Fragment() {
                     adapter = suresAdapter
                     layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
                 }
-                suresAdapter.onItemClickListener { selectedItem ->
-                    PlayDialogFragment(selectedItem).show(childFragmentManager , PlayDialogFragment(selectedItem).tag)
-                }
+            }
+            suresAdapter.onItemClickListener { selectedItem ->
+                PlayDialogFragment(selectedItem).show(childFragmentManager , PlayDialogFragment(selectedItem).tag)
             }
         }
     }
