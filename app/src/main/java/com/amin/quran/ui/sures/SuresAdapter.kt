@@ -23,8 +23,10 @@ import coil.load
 import com.amin.quran.R
 import com.amin.quran.databinding.ItemRecyclerSureBinding
 import com.amin.quran.models.Surah
+import com.amin.quran.utils.goneWidget
 import com.amin.quran.utils.setMyBackground
 import com.amin.quran.utils.showSnackBarShort
+import com.amin.quran.utils.showWidget
 import java.io.File
 import javax.inject.Inject
 
@@ -58,6 +60,11 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
                 txtSure.text = item.name
                 txtAyeCount.text = item.ayahs.toString()
                 txtSure.text = item.name
+                // Check if the audio file exists locally
+                val serverFileName = Uri.parse(item.downloadLink).lastPathSegment // e.g., "1.mp3"
+                val filePath = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "QuranFarsi/$serverFileName")
+                if (filePath.exists()) root.context.goneWidget(imgDownload) else root.context.showWidget(imgDownload)
+
                 var pos = 0
                 txtSure.setOnClickListener {
                     when(pos){
