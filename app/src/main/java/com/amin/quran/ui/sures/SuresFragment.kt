@@ -52,14 +52,5 @@ class SuresFragment : Fragment() {
 //        val minute = duration / (1000 * 60) % 60
 //        return java.lang.String.format(Locale.US, "%02d:%02d", minute, second)
 //    }
-//
-//    private fun readSuresFromAsset() : QuranSuresDC{
-//        val fileInRead = requireContext().assets.open("quranSures.json")
-//            .bufferedReader()
-//            .use {
-//                it.readText()
-//            }
-//        val dataFromJson = Gson().fromJson(fileInRead , QuranSuresDC::class.java)!!
-//        return dataFromJson
-//    }
+
 }
