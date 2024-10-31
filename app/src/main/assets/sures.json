@@ -1,0 +1,1030 @@
+{
+  "surahs": [
+    {
+      "name": "الفاتحة",
+      "transliteration": "Al-Fatiha",
+      "englishName": "The Opening",
+      "persianTranslation": "آغاز",
+      "ayahs": 7,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/1.mp3"
+    },
+    {
+      "name": "البقرة",
+      "transliteration": "Al-Baqarah",
+      "englishName": "The Cow",
+      "persianTranslation": "گاو ماده",
+      "ayahs": 286,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/2.mp3"
+    },
+    {
+      "name": "آل عمران",
+      "transliteration": "Al-Imran",
+      "englishName": "The Family of Imran",
+      "persianTranslation": "خاندان عمران",
+      "ayahs": 200,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/3.mp3"
+    },
+    {
+      "name": "النساء",
+      "transliteration": "An-Nisa",
+      "englishName": "The Women",
+      "persianTranslation": "زنان",
+      "ayahs": 176,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/4.mp3"
+    },
+    {
+      "name": "المائدة",
+      "transliteration": "Al-Ma'idah",
+      "englishName": "The Table Spread",
+      "persianTranslation": "سفره غذا",
+      "ayahs": 120,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/5.mp3"
+    },
+    {
+      "name": "الأنعام",
+      "transliteration": "Al-An'am",
+      "englishName": "The Cattle",
+      "persianTranslation": "چهارپایان",
+      "ayahs": 165,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/6.mp3"
+    },
+    {
+      "name": "الأعراف",
+      "transliteration": "Al-A'raf",
+      "englishName": "The Heights",
+      "persianTranslation": "مکانی بین بهشت و جهنم",
+      "ayahs": 206,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/7.mp3"
+    },
+    {
+      "name": "الأنفال",
+      "transliteration": "Al-Anfal",
+      "englishName": "The Spoils of War",
+      "persianTranslation": "غنائم جنگ",
+      "ayahs": 75,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/8.mp3"
+    },
+    {
+      "name": "التوبة",
+      "transliteration": "At-Tawbah",
+      "englishName": "The Repentance",
+      "persianTranslation": "بازگشتن",
+      "ayahs": 129,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/9.mp3"
+    },
+    {
+      "name": "يونس",
+      "transliteration": "Yunus",
+      "englishName": "Jonah",
+      "persianTranslation": "حضرت یونس(ع)",
+      "ayahs": 109,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/10.mp3"
+    },
+    {
+      "name": "هود",
+      "transliteration": "Hud",
+      "englishName": "Hud",
+      "persianTranslation": "حضرت هود (ع)",
+      "ayahs": 123,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/11.mp3"
+    },
+    {
+      "name": "يوسف",
+      "transliteration": "Yusuf",
+      "englishName": "Joseph",
+      "persianTranslation": "حضرت یوسف(ع)",
+      "ayahs": 111,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/12.mp3"
+    },
+    {
+      "name": "الرعد",
+      "transliteration": "Ar-Ra'd",
+      "englishName": "The Thunder",
+      "persianTranslation": "صاعقه",
+      "ayahs": 43,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/13.mp3"
+    },
+    {
+      "name": "ابراهيم",
+      "transliteration": "Ibrahim",
+      "englishName": "Abraham",
+      "persianTranslation": "حضرت ابراهیم(ع)",
+      "ayahs": 52,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/14.mp3"
+    },
+    {
+      "name": "الحجر",
+      "transliteration": "Al-Hijr",
+      "englishName": "The Rocky Tract",
+      "persianTranslation": "منع کردن",
+      "ayahs": 99,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/15.mp3"
+    },
+    {
+      "name": "النحل",
+      "transliteration": "An-Nahl",
+      "englishName": "The Bee",
+      "persianTranslation": "زنبور عسل",
+      "ayahs": 128,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/16.mp3"
+    },
+    {
+      "name": "الإسراء",
+      "transliteration": "Al-Isra",
+      "englishName": "The Night Journey",
+      "persianTranslation": "رفتن در شب",
+      "ayahs": 111,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/17.mp3"
+    },
+    {
+      "name": "الكهف",
+      "transliteration": "Al-Kahf",
+      "englishName": "The Cave",
+      "persianTranslation": "غار وسيع",
+      "ayahs": 110,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/18.mp3"
+    },
+    {
+      "name": "مريم",
+      "transliteration": "Maryam",
+      "englishName": "Mary",
+      "persianTranslation": "حضرت مریم (س)",
+      "ayahs": 98,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/19.mp3"
+    },
+    {
+      "name": "طه",
+      "transliteration": "Ta-Ha",
+      "englishName": "Ta-Ha",
+      "persianTranslation": "از حروف مقطعه قرآن",
+      "ayahs": 135,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/20.mp3"
+    },
+    {
+      "name": "الأنبياء",
+      "transliteration": "Al-Anbiya",
+      "englishName": "The Prophets",
+      "persianTranslation": "پیامبران",
+      "ayahs": 112,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/21.mp3"
+    },
+    {
+      "name": "الحج",
+      "transliteration": "Al-Hajj",
+      "englishName": "The Pilgrimage",
+      "persianTranslation": "دیدارخانه ی خدا",
+      "ayahs": 78,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/22.mp3"
+    },
+    {
+      "name": "المؤمنون",
+      "transliteration": "Al-Mu'minun",
+      "englishName": "The Believers",
+      "persianTranslation": "باور کنندگان",
+      "ayahs": 118,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/23.mp3"
+    },
+    {
+      "name": "النّور",
+      "transliteration": "An-Nur",
+      "englishName": "The Light",
+      "persianTranslation": "روشنایی",
+      "ayahs": 64,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/24.mp3"
+    },
+    {
+      "name": "الفرقان",
+      "transliteration": "Al-Furqan",
+      "englishName": "The Criterion",
+      "persianTranslation": "جدا کننده حق از باطل",
+      "ayahs": 77,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/25.mp3"
+    },
+    {
+      "name": "الشعراء",
+      "transliteration": "Ash-Shu'ara",
+      "englishName": "The Poets",
+      "persianTranslation": "شاعران",
+      "ayahs": 227,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/26.mp3"
+    },
+    {
+      "name": "النّمل",
+      "transliteration": "An-Naml",
+      "englishName": "The Ant",
+      "persianTranslation": "مورچه",
+      "ayahs": 93,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/27.mp3"
+    },
+    {
+      "name": "القصص",
+      "transliteration": "Al-Qasas",
+      "englishName": "The Stories",
+      "persianTranslation": "داستان ها",
+      "ayahs": 88,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/28.mp3"
+    },
+    {
+      "name": "العنكبوت",
+      "transliteration": "Al-Ankabut",
+      "englishName": "The Spider",
+      "persianTranslation": "عنکبوت",
+      "ayahs": 69,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/29.mp3"
+    },
+    {
+      "name": "الروم",
+      "transliteration": "Ar-Rum",
+      "englishName": "The Romans",
+      "persianTranslation": "رومیان",
+      "ayahs": 60,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/30.mp3"
+    },
+    {
+      "name": "لقمان",
+      "transliteration": "Luqman",
+      "englishName": "Luqman",
+      "persianTranslation": "لقمان (نام فردی حکیم)",
+      "ayahs": 34,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/31.mp3"
+    },
+    {
+      "name": "السجدة",
+      "transliteration": "As-Sajda",
+      "englishName": "The Prostration",
+      "persianTranslation": "اظهار فروتنی",
+      "ayahs": 30,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/32.mp3"
+    },
+    {
+      "name": "الأحزاب",
+      "transliteration": "Al-Ahzab",
+      "englishName": "The Combined Forces",
+      "persianTranslation": "گروه ها",
+      "ayahs": 73,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/33.mp3"
+    },
+    {
+      "name": "سبأ",
+      "transliteration": "Saba",
+      "englishName": "Sheba",
+      "persianTranslation": "نام قومی که پادشاه آنها زن بود",
+      "ayahs": 54,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/34.mp3"
+    },
+    {
+      "name": "فاطر",
+      "transliteration": "Fatir",
+      "englishName": "The Originator",
+      "persianTranslation": "شکافنده",
+      "ayahs": 45,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/35.mp3"
+    },
+    {
+      "name": "يس",
+      "transliteration": "Yasin",
+      "englishName": "Yasin",
+      "persianTranslation": "از حروف مقطعه قرآن",
+      "ayahs": 83,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/36.mp3"
+    },
+    {
+      "name": "الصافات",
+      "transliteration": "As-Saffat",
+      "englishName": "Those who set the Ranks",
+      "persianTranslation": "منظم ساختن صفوف",
+      "ayahs": 182,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/37.mp3"
+    },
+    {
+      "name": "ص",
+      "transliteration": "Sad",
+      "englishName": "Sad",
+      "persianTranslation": "از حروف مقطعه قرآن",
+      "ayahs": 88,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/38.mp3"
+    },
+    {
+      "name": "الزمر",
+      "transliteration": "Az-Zumar",
+      "englishName": "The Troops",
+      "persianTranslation": "گروه‌ ها",
+      "ayahs": 75,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/39.mp3"
+    },
+    {
+      "name": "غافر",
+      "transliteration": "Ghafir",
+      "englishName": "The Forgiver",
+      "persianTranslation": "بخشنده",
+      "ayahs": 85,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/40.mp3"
+    },
+    {
+      "name": "فصلت",
+      "transliteration": "Fussilat",
+      "englishName": "Explained in Detail",
+      "persianTranslation": "بیان روشن",
+      "ayahs": 54,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/41.mp3"
+    },
+    {
+      "name": "الشورى",
+      "transliteration": "Ash-Shura",
+      "englishName": "Consultation",
+      "persianTranslation": "مشورت",
+      "ayahs": 53,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/42.mp3"
+    },
+    {
+      "name": "الزخرف",
+      "transliteration": "Az-Zukhruf",
+      "englishName": "Gold Adornments",
+      "persianTranslation": "زینت‌",
+      "ayahs": 89,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/43.mp3"
+    },
+    {
+      "name": "الدخان",
+      "transliteration": "Ad-Dukhan",
+      "englishName": "The Smoke",
+      "persianTranslation": "دود",
+      "ayahs": 59,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/44.mp3"
+    },
+    {
+      "name": "الجاثية",
+      "transliteration": "Al-Jathiyah",
+      "englishName": "Crouching",
+      "persianTranslation": "به زانو درآمده",
+      "ayahs": 37,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/45.mp3"
+    },
+    {
+      "name": "الأحقاف",
+      "transliteration": "Al-Ahqaf",
+      "englishName": "The Wind-Curved Sandhills",
+      "persianTranslation": "شن های رونده",
+      "ayahs": 35,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/46.mp3"
+    },
+    {
+      "name": "محمد",
+      "transliteration": "Muhammad",
+      "englishName": "Muhammad",
+      "persianTranslation": "نام پیامبر اسلام(ص)",
+      "ayahs": 38,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/47.mp3"
+    },
+    {
+      "name": "الفتح",
+      "transliteration": "Al-Fath",
+      "englishName": "The Victory",
+      "persianTranslation": "پیروزی",
+      "ayahs": 29,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/48.mp3"
+    },
+    {
+      "name": "الحجرات",
+      "transliteration": "Al-Hujurat",
+      "englishName": "The Rooms",
+      "persianTranslation": "خانه‌ها",
+      "ayahs": 18,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/49.mp3"
+    },
+    {
+      "name": "ق",
+      "transliteration": "Qaf",
+      "englishName": "Qaf",
+      "persianTranslation": "از حروف مقطعه قرآن",
+      "ayahs": 45,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/50.mp3"
+    },
+    {
+      "name": "الذاريات",
+      "transliteration": "Adh-Dhariyat",
+      "englishName": "The Winnowing Winds",
+      "persianTranslation": "بادهای شدید",
+      "ayahs": 60,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/51.mp3"
+    },
+    {
+      "name": "الطور",
+      "transliteration": "At-Tur",
+      "englishName": "The Mount",
+      "persianTranslation": "نام کوه است",
+      "ayahs": 49,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/52.mp3"
+    },
+    {
+      "name": "النجم",
+      "transliteration": "An-Najm",
+      "englishName": "The Star",
+      "persianTranslation": "ستاره",
+      "ayahs": 62,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/53.mp3"
+    },
+    {
+      "name": "القمر",
+      "transliteration": "Al-Qamar",
+      "englishName": "The Moon",
+      "persianTranslation": "ماه",
+      "ayahs": 55,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/54.mp3"
+    },
+    {
+      "name": "الرحمن",
+      "transliteration": "Ar-Rahman",
+      "englishName": "The Beneficent",
+      "persianTranslation": "بخشنده",
+      "ayahs": 78,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/55.mp3"
+    },
+    {
+      "name": "الواقعة",
+      "transliteration": "Al-Waqi'a",
+      "englishName": "The Inevitable",
+      "persianTranslation": "حادثه عظیم قیامت",
+      "ayahs": 96,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/56.mp3"
+    },
+    {
+      "name": "الحديد",
+      "transliteration": "Al-Hadid",
+      "englishName": "The Iron",
+      "persianTranslation": "آهن",
+      "ayahs": 29,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/57.mp3"
+    },
+    {
+      "name": "المجادلة",
+      "transliteration": "Al-Mujadila",
+      "englishName": "The Pleading Woman",
+      "persianTranslation": "جدول و مناظره",
+      "ayahs": 22,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/58.mp3"
+    },
+    {
+      "name": "الحشر",
+      "transliteration": "Al-Hashr",
+      "englishName": "The Exile",
+      "persianTranslation": "جمع کردن",
+      "ayahs": 24,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/59.mp3"
+    },
+    {
+      "name": "الممتحنة",
+      "transliteration": "Al-Mumtahina",
+      "englishName": "She that is to be examined",
+      "persianTranslation": "آزموده شده (مونث)",
+      "ayahs": 13,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/60.mp3"
+    },
+    {
+      "name": "الصف",
+      "transliteration": "As-Saff",
+      "englishName": "The Ranks",
+      "persianTranslation": "صف کشیدن",
+      "ayahs": 14,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/61.mp3"
+    },
+    {
+      "name": "الجمعة",
+      "transliteration": "Al-Jumu'a",
+      "englishName": "Friday",
+      "persianTranslation": "آخرین روز هفته (جمعه)",
+      "ayahs": 11,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/62.mp3"
+    },
+    {
+      "name": "المنافقون",
+      "transliteration": "Al-Munafiqun",
+      "englishName": "The Hypocrites",
+      "persianTranslation": "دو رویان",
+      "ayahs": 11,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/63.mp3"
+    },
+    {
+      "name": "التغابن",
+      "transliteration": "At-Taghabun",
+      "englishName": "Facing a loss",
+      "persianTranslation": "ضرر دیدن",
+      "ayahs": 18,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/64.mp3"
+    },
+    {
+      "name": "الطلاق",
+      "transliteration": "At-Talaq",
+      "englishName": "Divorce",
+      "persianTranslation": "طلاق",
+      "ayahs": 12,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/65.mp3"
+    },
+    {
+      "name": "التحريم",
+      "transliteration": "At-Tahrim",
+      "englishName": "The Prohibition",
+      "persianTranslation": "حرام کردن",
+      "ayahs": 12,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/66.mp3"
+    },
+    {
+      "name": "الملك",
+      "transliteration": "Al-Mulk",
+      "englishName": "The Sovereignty",
+      "persianTranslation": "حکومت و اداره امور",
+      "ayahs": 30,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/67.mp3"
+    },
+    {
+      "name": "القلم",
+      "transliteration": "Al-Qalam",
+      "englishName": "The Pen",
+      "persianTranslation": "وسیله نگارش و نوشتن",
+      "ayahs": 52,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/68.mp3"
+    },
+    {
+      "name": "الحاقة",
+      "transliteration": "Al-Haqqah",
+      "englishName": "The Reality",
+      "persianTranslation": "حقیقت‌",
+      "ayahs": 52,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/69.mp3"
+    },
+    {
+      "name": "المعارج",
+      "transliteration": "Al-Ma'arij",
+      "englishName": "The Ascending Stairways",
+      "persianTranslation": "پله‌های صعودی",
+      "ayahs": 44,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/70.mp3"
+    },
+    {
+      "name": "نوح",
+      "transliteration": "Nuh",
+      "englishName": "Noah",
+      "persianTranslation": "حضرت نوح(ع)",
+      "ayahs": 28,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/71.mp3"
+    },
+    {
+      "name": "الجن",
+      "transliteration": "Al-Jinn",
+      "englishName": "The Jinn",
+      "persianTranslation": "نام موجود نامرئی (جن)",
+      "ayahs": 28,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/72.mp3"
+    },
+    {
+      "name": "المزمل",
+      "transliteration": "Al-Muzzammil",
+      "englishName": "The Enshrouded One",
+      "persianTranslation": "پیچیدن پارچه",
+      "ayahs": 20,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/73.mp3"
+    },
+    {
+      "name": "المدثر",
+      "transliteration": "Al-Muddathir",
+      "englishName": "The Cloaked One",
+      "persianTranslation": "آرمیده در بستر",
+      "ayahs": 56,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/74.mp3"
+    },
+    {
+      "name": "القيامة",
+      "transliteration": "Al-Qiyamah",
+      "englishName": "The Resurrection",
+      "persianTranslation": "روز قیامت",
+      "ayahs": 40,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/75.mp3"
+    },
+    {
+      "name": "الانسان",
+      "transliteration": "Al-Insan",
+      "englishName": "Man",
+      "persianTranslation": "انسان",
+      "ayahs": 31,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/76.mp3"
+    },
+    {
+      "name": "المرسلات",
+      "transliteration": "Al-Mursalat",
+      "englishName": "The Emissaries",
+      "persianTranslation": "فرستادگان",
+      "ayahs": 50,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/77.mp3"
+    },
+    {
+      "name": "النبإ",
+      "transliteration": "An-Naba",
+      "englishName": "The Tidings",
+      "persianTranslation": "خبر مهم",
+      "ayahs": 40,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/78.mp3"
+    },
+    {
+      "name": "النازعات",
+      "transliteration": "An-Nazi'at",
+      "englishName": "Those who drag forth",
+      "persianTranslation": "بیرون کشندگان",
+      "ayahs": 46,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/79.mp3"
+    },
+    {
+      "name": "عبس",
+      "transliteration": "Abasa",
+      "englishName": "He frowned",
+      "persianTranslation": "چهره درهم کشیدن",
+      "ayahs": 42,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/80.mp3"
+    },
+    {
+      "name": "التکویر",
+      "transliteration": "At-Takwir",
+      "englishName": "The Overthrowing",
+      "persianTranslation": "پيچيدن نور خورشيد",
+      "ayahs": 29,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/81.mp3"
+    },
+    {
+      "name": "الانفطار",
+      "transliteration": "Al-Infitar",
+      "englishName": "The Cleaving",
+      "persianTranslation": "شکافتن",
+      "ayahs": 19,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/82.mp3"
+    },
+    {
+      "name": "المطففين",
+      "transliteration": "Al-Mutaffifin",
+      "englishName": "Defrauding",
+      "persianTranslation": "كم‌فروشان",
+      "ayahs": 36,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/83.mp3"
+    },
+    {
+      "name": "الانشقاق",
+      "transliteration": "Al-Inshiqaq",
+      "englishName": "The Splitting Open",
+      "persianTranslation": "ترکیدن",
+      "ayahs": 25,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/84.mp3"
+    },
+    {
+      "name": "البروج",
+      "transliteration": "Al-Buruj",
+      "englishName": "The Mansions of the Stars",
+      "persianTranslation": "جایگاه ستارگان",
+      "ayahs": 22,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/85.mp3"
+    },
+    {
+      "name": "الطارق",
+      "transliteration": "At-Tariq",
+      "englishName": "The Morning Star",
+      "persianTranslation": "ستاره ی شبگرد",
+      "ayahs": 17,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/86.mp3"
+    },
+    {
+      "name": "الأعلى",
+      "transliteration": "Al-A'la",
+      "englishName": "The Most High",
+      "persianTranslation": "بلندترین",
+      "ayahs": 19,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/87.mp3"
+    },
+    {
+      "name": "الغاشية",
+      "transliteration": "Al-Ghashiyah",
+      "englishName": "The Overwhelming",
+      "persianTranslation": "فرا گیرنده",
+      "ayahs": 26,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/88.mp3"
+    },
+    {
+      "name": "الفجر",
+      "transliteration": "Al-Fajr",
+      "englishName": "The Dawn",
+      "persianTranslation": "صبح",
+      "ayahs": 30,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/89.mp3"
+    },
+    {
+      "name": "البلد",
+      "transliteration": "Al-Balad",
+      "englishName": "The City",
+      "persianTranslation": "شهر(مکه)",
+      "ayahs": 20,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/90.mp3"
+    },
+    {
+      "name": "الشمس",
+      "transliteration": "Ash-Shams",
+      "englishName": "The Sun",
+      "persianTranslation": "خورشید",
+      "ayahs": 15,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/91.mp3"
+    },
+    {
+      "name": "الليل",
+      "transliteration": "Al-Lail",
+      "englishName": "The Night",
+      "persianTranslation": "شب",
+      "ayahs": 21,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/92.mp3"
+    },
+    {
+      "name": "الضحى",
+      "transliteration": "Ad-Duha",
+      "englishName": "The Morning Hours",
+      "persianTranslation": "اوائل روز",
+      "ayahs": 11,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/93.mp3"
+    },
+    {
+      "name": "الشرح",
+      "transliteration": "Ash-Sharh",
+      "englishName": "The Relief",
+      "persianTranslation": "گشایش",
+      "ayahs": 8,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/94.mp3"
+    },
+    {
+      "name": "التين",
+      "transliteration": "At-Tin",
+      "englishName": "The Fig",
+      "persianTranslation": "انجیر",
+      "ayahs": 8,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/95.mp3"
+    },
+    {
+      "name": "العلق",
+      "transliteration": "Al-Alaq",
+      "englishName": "The Clot",
+      "persianTranslation": "خون بسته",
+      "ayahs": 19,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/96.mp3"
+    },
+    {
+      "name": "القدر",
+      "transliteration": "Al-Qadr",
+      "englishName": "The Power",
+      "persianTranslation": "قدرت",
+      "ayahs": 5,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/97.mp3"
+    },
+    {
+      "name": "البينة",
+      "transliteration": "Al-Bayyina",
+      "englishName": "The Clear Proof",
+      "persianTranslation": "دلیل روشن",
+      "ayahs": 8,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/98.mp3"
+    },
+    {
+      "name": "الزلزلة",
+      "transliteration": "Az-Zalzalah",
+      "englishName": "The Earthquake",
+      "persianTranslation": "زلزله",
+      "ayahs": 8,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/99.mp3"
+    },
+    {
+      "name": "العاديات",
+      "transliteration": "Al-Adiyat",
+      "englishName": "The Chargers",
+      "persianTranslation": "دویدن با سرعت",
+      "ayahs": 11,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/100.mp3"
+    },
+    {
+      "name": "القارعة",
+      "transliteration": "Al-Qari'a",
+      "englishName": "The Calamity",
+      "persianTranslation": "فاجعه",
+      "ayahs": 11,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/101.mp3"
+    },
+    {
+      "name": "التكاثر",
+      "transliteration": "At-Takathur",
+      "englishName": "The Rivalry",
+      "persianTranslation": "فخر فروشی",
+      "ayahs": 8,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/102.mp3"
+    },
+    {
+      "name": "العصر",
+      "transliteration": "Al-Asr",
+      "englishName": "Time",
+      "persianTranslation": "زمان",
+      "ayahs": 3,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/103.mp3"
+    },
+    {
+      "name": "الهمزة",
+      "transliteration": "Al-Humaza",
+      "englishName": "The Slanderer",
+      "persianTranslation": "عیب جو",
+      "ayahs": 9,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/104.mp3"
+    },
+    {
+      "name": "الفيل",
+      "transliteration": "Al-Fil",
+      "englishName": "The Elephant",
+      "persianTranslation": "فیل",
+      "ayahs": 5,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/105.mp3"
+    },
+    {
+      "name": "قريش",
+      "transliteration": "Quraysh",
+      "englishName": "Quraysh",
+      "persianTranslation": "نام قبیله معروف در مکه",
+      "ayahs": 4,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/106.mp3"
+    },
+    {
+      "name": "الماعون",
+      "transliteration": "Al-Ma'un",
+      "englishName": "Little Thing",
+      "persianTranslation": "چیز کم",
+      "ayahs": 7,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/107.mp3"
+    },
+    {
+      "name": "الكوثر",
+      "transliteration": "Al-Kawthar",
+      "englishName": "Abundance",
+      "persianTranslation": "فراوانی",
+      "ayahs": 3,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/108.mp3"
+    },
+    {
+      "name": "الكافرون",
+      "transliteration": "Al-Kafirun",
+      "englishName": "The Disbelievers",
+      "persianTranslation": "کافران",
+      "ayahs": 6,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/109.mp3"
+    },
+    {
+      "name": "النصر",
+      "transliteration": "An-Nasr",
+      "englishName": "The Divine Support",
+      "persianTranslation": "پیروزی",
+      "ayahs": 3,
+      "place": "Medina",
+      "downloadLink": "https://sshb.ir/quran/110.mp3"
+    },
+    {
+      "name": "المسد",
+      "transliteration": "Al-Masad",
+      "englishName": "The Palm Fiber",
+      "persianTranslation": "طنابی که از الیاف بافته شده",
+      "ayahs": 5,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/111.mp3"
+    },
+    {
+      "name": "الإخلاص",
+      "transliteration": "Al-Ikhlas",
+      "englishName": "Sincerity",
+      "persianTranslation": "یگانگی",
+      "ayahs": 4,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/112.mp3"
+    },
+    {
+      "name": "الفلق",
+      "transliteration": "Al-Falaq",
+      "englishName": "The Daybreak",
+      "persianTranslation": "طلوع صبح",
+      "ayahs": 5,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/113.mp3"
+    },
+    {
+      "name": "الناس",
+      "transliteration": "An-Nas",
+      "englishName": "Mankind",
+      "persianTranslation": "مردم",
+      "ayahs": 6,
+      "place": "Mecca",
+      "downloadLink": "https://sshb.ir/quran/114.mp3"
+    }
+  ]
+}
