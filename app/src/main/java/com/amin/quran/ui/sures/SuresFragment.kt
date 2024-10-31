@@ -33,7 +33,6 @@ class SuresFragment : Fragment() {
         binding.apply {
             viewModel.getSuresDataFromAssets()
             viewModel.suresLiveData.observe(viewLifecycleOwner){
-                Log.i("sadasdasd", it.toString())
                 suresAdapter.setData(it.surahs)
                 recyclerSure.apply {
                     adapter = suresAdapter

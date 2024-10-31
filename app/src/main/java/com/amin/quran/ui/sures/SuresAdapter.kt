@@ -1,11 +1,21 @@
 package com.amin.quran.ui.sures
 
+import android.Manifest
 import com.amin.quran.models.SureModel
 import android.annotation.SuppressLint
+import android.app.Activity
+import android.app.DownloadManager
 import android.content.Context
+import android.content.Intent
+import android.content.pm.PackageManager
+import android.net.Uri
+import android.os.Build
+import android.os.Environment
+import android.provider.Settings
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +25,7 @@ import com.amin.quran.databinding.ItemRecyclerSureBinding
 import com.amin.quran.models.Surah
 import com.amin.quran.utils.setMyBackground
 import com.amin.quran.utils.showSnackBarShort
+import java.io.File
 import javax.inject.Inject
 
 class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.SureViewHolder>() {
@@ -86,6 +97,11 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
                         crossfade(100)
                     }
                 }
+                imgDownload.setOnClickListener {
+                    item.downloadLink?.let {
+                        downloadFile(root.context , item.name , item.downloadLink)
+                    }
+                }
             }
         }
     }
@@ -104,4 +120,45 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
             return oldItems[oldItemPosition] == newItems[newItemPosition]
         }
     }
+
+    private fun downloadFile(context: Context, fileName: String, fileUrl: String) {
+        // Check permission for Android 10 and below
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.Q &&
+            ContextCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            // Request permissions if not granted
+            ActivityCompat.requestPermissions((context as Activity), arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
+            return
+        }
+
+        // Check for MANAGE_EXTERNAL_STORAGE permission on Android 11+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
+            val intent = Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION)
+            intent.data = Uri.parse("package:${context.packageName}")
+            context.startActivity(intent)
+            return
+        }
+
+        // Extract the original filename from the URL
+        val serverFileName = Uri.parse(fileUrl).lastPathSegment ?: "default_name.mp3"
+
+        // Create download folder in Downloads directory
+        val downloadFolder = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "QuranFarsi")
+        if (!downloadFolder.exists()) {
+            downloadFolder.mkdirs()
+        }
+
+        // Setup the download request
+        val request = DownloadManager.Request(Uri.parse(fileUrl))
+            .setTitle("دانلود سوره ی $fileName")
+//            .setDescription("Downloading Quran Surah")
+            .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
+            .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "QuranFarsi/$serverFileName")
+            .setAllowedOverMetered(true)
+            .setAllowedOverRoaming(true)
+
+        // Enqueue the request
+        val downloadManager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
+        downloadManager.enqueue(request)
+    }
+
 }
