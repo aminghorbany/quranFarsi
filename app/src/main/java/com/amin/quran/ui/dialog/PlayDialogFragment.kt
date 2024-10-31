@@ -32,44 +32,48 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        initializePlayer()
+        setupUI()
+
+        dialog?.setOnDismissListener {
+                exoPlayer.release()
+        }
+    }
+
+    private fun initializePlayer() {
+        val serverFileName = Uri.parse(data.downloadLink).lastPathSegment
+        val filePath = File(Environment.getExternalStoragePublicDirectory(
+            Environment.DIRECTORY_DOWNLOADS), "QuranFarsi/$serverFileName")
+        val mediaItem = MediaItem.fromUri(filePath.path)
+        exoPlayer.apply {
+            setMediaItem(mediaItem)
+            prepare()
+            play()
+        }
+
+        // Initialize the slider's max value to the duration
+        exoPlayer.addListener(object : Player.Listener {
+            override fun onIsPlayingChanged(isPlaying: Boolean) {
+                if (isPlaying) {
+                    binding.sliderMain.valueTo = exoPlayer.duration.toFloat()
+                    updateSliderPosition()
+                }
+            }
+        })
+        // Update slider in sync with playback position
+        exoPlayer.addListener(object : Player.Listener {
+            override fun onPlaybackStateChanged(playbackState: Int) {
+                if (playbackState == Player.STATE_READY && !isUserSeeking) {
+                    binding.sliderMain.value = exoPlayer.currentPosition.toFloat()
+                    binding.txtTimerEnd.text = formatTime(exoPlayer.duration)
+                }
+            }
+        })
+    }
+
+    private fun setupUI() {
         binding.apply {
             txtSureName.text = data.name
-            val serverFileName = Uri.parse(data.downloadLink).lastPathSegment // e.g., "1.mp3"
-            val filePath = File(Environment.getExternalStoragePublicDirectory(
-                Environment.DIRECTORY_DOWNLOADS), "QuranFarsi/$serverFileName")
-            val mediaItem = MediaItem.fromUri(filePath.path) // URL or local file
-            exoPlayer.apply {
-                setMediaItem(mediaItem)
-                prepare()
-                play()
-            }
-            // Initialize the slider's max value to the duration
-            exoPlayer.addListener(object : Player.Listener {
-                override fun onIsPlayingChanged(isPlaying: Boolean) {
-                    if (isPlaying) {
-                        binding.sliderMain.valueTo = exoPlayer.duration.toFloat()
-                        updateSliderPosition()
-                    }
-                }
-            })
-            // Update slider in sync with playback position
-            exoPlayer.addListener(object : Player.Listener {
-                override fun onPlaybackStateChanged(playbackState: Int) {
-                    if (playbackState == Player.STATE_READY && !isUserSeeking) {
-                        binding.sliderMain.value = exoPlayer.currentPosition.toFloat()
-                        binding.txtTimerEnd.text = formatTime(exoPlayer.duration)
-                    }
-                }
-            })
-
-            // Sync slider with playback progress
-            binding.sliderMain.addOnChangeListener { slider, value, fromUser ->
-                if (fromUser) {
-                    isUserSeeking = true
-                    exoPlayer.seekTo(value.toLong())
-                    isUserSeeking = false
-                }
-            }
 
             imgPlayPause.setOnClickListener {
                 if (exoPlayer.isPlaying) {
@@ -79,15 +83,18 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
                 }
             }
             imgGoAfter.setOnClickListener {
-                requireContext().showToast("imgGoAfter")
+                exoPlayer.duration + 5000
             }
             imgGoBefore.setOnClickListener {
-                requireContext().showToast("imgGoBefore")
+                exoPlayer.duration - 5000
             }
-
-
-            dialog?.setOnDismissListener {
-                exoPlayer.release()
+            // Sync slider with playback progress
+            sliderMain.addOnChangeListener { slider, value, fromUser ->
+                if (fromUser) {
+                    isUserSeeking = true
+                    exoPlayer.seekTo(value.toLong())
+                    isUserSeeking = false
+                }
             }
         }
     }
@@ -108,6 +115,16 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
         val minutes = (milliseconds / 1000) / 60
         val seconds = (milliseconds / 1000) % 60
         return String.format(Locale.US, "%02d:%02d", minutes, seconds)
+    }
+
+    private fun releasePlayer() {
+        exoPlayer.stop()
+        exoPlayer.clearMediaItems()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        releasePlayer()
     }
 
 }

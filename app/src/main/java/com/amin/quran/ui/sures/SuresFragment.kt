@@ -46,11 +46,4 @@ class SuresFragment : Fragment() {
             }
         }
     }
-
-//    private fun convertMillisToString(duration: Long): String {
-//        val second = duration / 1000 % 60
-//        val minute = duration / (1000 * 60) % 60
-//        return java.lang.String.format(Locale.US, "%02d:%02d", minute, second)
-//    }
-
 }
