@@ -23,6 +23,7 @@ import coil.load
 import com.amin.quran.R
 import com.amin.quran.databinding.ItemRecyclerSureBinding
 import com.amin.quran.models.Surah
+import com.amin.quran.ui.dialog.PlayDialogFragment
 import com.amin.quran.utils.goneWidget
 import com.amin.quran.utils.setMyBackground
 import com.amin.quran.utils.showSnackBarShort
@@ -120,8 +121,15 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
                         }
                     }
                 }
+                root.setOnClickListener {
+                    onItemClick?.invoke(item)
+                }
             }
         }
+    }
+    private var onItemClick : ((Surah) -> Unit?) ?= null
+    fun onItemClickListener(listener : (Surah) -> Unit? ){
+        onItemClick = listener
     }
 
     private class SuresDiffUtils(private val oldItems: List<Surah>, private val newItems: List<Surah>) : DiffUtil.Callback() {

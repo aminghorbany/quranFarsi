@@ -12,6 +12,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.amin.quran.databinding.FragmentSuresBinding
 import com.amin.quran.models.Surah
 import com.amin.quran.models.SureModel
+import com.amin.quran.ui.dialog.PlayDialogFragment
+import com.amin.quran.utils.showToast
 import com.amin.quran.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.*
@@ -37,6 +39,9 @@ class SuresFragment : Fragment() {
                 recyclerSure.apply {
                     adapter = suresAdapter
                     layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
+                }
+                suresAdapter.onItemClickListener { selectedItem ->
+                    PlayDialogFragment(selectedItem).show(childFragmentManager , PlayDialogFragment(selectedItem).tag)
                 }
             }
         }
