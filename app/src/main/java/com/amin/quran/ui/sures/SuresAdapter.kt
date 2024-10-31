@@ -26,6 +26,7 @@ import com.amin.quran.models.Surah
 import com.amin.quran.utils.goneWidget
 import com.amin.quran.utils.setMyBackground
 import com.amin.quran.utils.showSnackBarShort
+import com.amin.quran.utils.showToast
 import com.amin.quran.utils.showWidget
 import java.io.File
 import javax.inject.Inject
@@ -63,7 +64,13 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
                 // Check if the audio file exists locally
                 val serverFileName = Uri.parse(item.downloadLink).lastPathSegment // e.g., "1.mp3"
                 val filePath = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "QuranFarsi/$serverFileName")
-                if (filePath.exists()) root.context.goneWidget(imgDownload) else root.context.showWidget(imgDownload)
+                if (filePath.exists()){
+                    root.context.goneWidget(imgDownload)
+                    root.setBackgroundColor(ContextCompat.getColor(root.context , R.color.green_50))
+                } else {
+                    root.context.showWidget(imgDownload)
+                    root.setBackgroundColor(ContextCompat.getColor(root.context , R.color.white))
+                }
 
                 var pos = 0
                 txtSure.setOnClickListener {
@@ -106,7 +113,11 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
                 }
                 imgDownload.setOnClickListener {
                     item.downloadLink?.let {
-                        downloadFile(root.context , item.name , item.downloadLink)
+                        if (!filePath.exists()){
+                            downloadFile(root.context , item.name , item.downloadLink)
+                        }else{
+                            root.context.showSnackBarShort("این سوره از قبل دریافت شده است" , root , "باشه")
+                        }
                     }
                 }
             }
@@ -157,13 +168,13 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
         // Setup the download request
         val request = DownloadManager.Request(Uri.parse(fileUrl))
             .setTitle("دانلود سوره ی $fileName")
-//            .setDescription("Downloading Quran Surah")
             .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
             .setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, "QuranFarsi/$serverFileName")
             .setAllowedOverMetered(true)
             .setAllowedOverRoaming(true)
 
         // Enqueue the request
+        context.showToast("دریافت شروع شد...")
         val downloadManager = context.getSystemService(Context.DOWNLOAD_SERVICE) as DownloadManager
         downloadManager.enqueue(request)
     }
