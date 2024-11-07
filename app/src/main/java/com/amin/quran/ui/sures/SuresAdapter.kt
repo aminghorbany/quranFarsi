@@ -26,6 +26,7 @@ import com.amin.quran.models.Surah
 import com.amin.quran.ui.dialog.PlayDialogFragment
 import com.amin.quran.utils.goneWidget
 import com.amin.quran.utils.setMyBackground
+import com.amin.quran.utils.showSnackBarLong
 import com.amin.quran.utils.showSnackBarShort
 import com.amin.quran.utils.showToast
 import com.amin.quran.utils.showWidget
@@ -122,7 +123,11 @@ class SuresAdapter @Inject constructor() : RecyclerView.Adapter<SuresAdapter.Sur
                     }
                 }
                 root.setOnClickListener {
-                    onItemClick?.invoke(item)
+                    if (filePath.exists()){
+                        onItemClick?.invoke(item)
+                    }else{
+                        root.context.showSnackBarLong("ابتدا سوره را دانلود نمایید" , root , "باشه")
+                    }
                 }
             }
         }
