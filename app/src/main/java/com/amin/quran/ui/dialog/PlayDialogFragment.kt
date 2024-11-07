@@ -76,17 +76,19 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
         binding.apply {
             txtSureName.text = data.name
 
-            imgPlayPause.setOnClickListener {
+            imgPlayAndPause.setOnClickListener {
                 if (exoPlayer.isPlaying) {
                     exoPlayer.pause()
+                    imgPlayAndPause.setImageResource(R.drawable.ic_play)
                 } else {
                     exoPlayer.play()
+                    imgPlayAndPause.setImageResource(R.drawable.ic_pause)
                 }
             }
-            imgGoAfter.setOnClickListener {
+            imgForward.setOnClickListener {
                 exoPlayer.seekTo(exoPlayer.currentPosition + 5000)
             }
-            imgGoBefore.setOnClickListener {
+            imgBackward.setOnClickListener {
                 exoPlayer.seekTo(exoPlayer.currentPosition - 5000)
             }
             // Sync slider with playback progress

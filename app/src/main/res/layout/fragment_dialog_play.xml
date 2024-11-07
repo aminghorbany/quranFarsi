@@ -71,81 +71,75 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingTop="@dimen/_5sdp"
-            android:paddingBottom="@dimen/_5sdp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:paddingTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+
+        <ImageView
+            android:id="@+id/imgForward"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_9sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPlayAndPause"
+            app:layout_constraintStart_toEndOf="@+id/imgPlayAndPause"
+            app:layout_constraintTop_toTopOf="@+id/imgPlayAndPause"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/imgBackward"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_9sdp"
+            android:rotation="180"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintBottom_toBottomOf="@+id/imgPlayAndPause"
+            app:layout_constraintEnd_toStartOf="@+id/imgPlayAndPause"
+            app:layout_constraintTop_toTopOf="@+id/imgPlayAndPause"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/imgPlayAndPause"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_1sdp"
+            android:src="@drawable/ic_pause"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
 
+        <ImageView
+            android:id="@+id/imgReplayOnOff"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginStart="32dp"
+            android:src="@drawable/ic_replay_off"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imgGoBefore"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginEnd="@dimen/_8sdp"
-                android:padding="@dimen/_9sdp"
-                android:src="@drawable/ic_before"
-                app:layout_constraintBottom_toBottomOf="@+id/framePlayPause"
-                app:layout_constraintEnd_toStartOf="@+id/framePlayPause"
-                app:layout_constraintTop_toTopOf="@+id/framePlayPause"
-                app:tint="@color/black" />
+        <ImageView
+            android:id="@+id/imgHeartInPlayer"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="32dp"
+            android:src="@drawable/ic_heart_empty_red_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/imgGoAfter"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:layout_marginStart="@dimen/_8sdp"
-                android:padding="@dimen/_9sdp"
-                android:src="@drawable/ic_next"
-                app:layout_constraintBottom_toBottomOf="@+id/framePlayPause"
-                app:layout_constraintStart_toEndOf="@+id/framePlayPause"
-                app:layout_constraintTop_toTopOf="@+id/framePlayPause"
-                app:tint="@color/black" />
-
-            <FrameLayout
-                android:id="@+id/framePlayPause"
-                android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_40sdp"
-                android:background="@drawable/shape_play"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:layout_marginLeft="@dimen/_2sdp"
-                    android:id="@+id/imgPlayPause"
-                    android:layout_width="@dimen/_28sdp"
-                    android:layout_height="@dimen/_28sdp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/ic_play" />
-
-            </FrameLayout>
-
-            <ImageView
-                android:id="@+id/imgReplayOnOff"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_marginStart="32dp"
-                android:src="@drawable/ic_replay_off"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imgHeartInPlayer"
-                android:layout_width="@dimen/_20sdp"
-                android:layout_height="@dimen/_20sdp"
-                android:layout_marginEnd="32dp"
-                android:src="@drawable/ic_heart_empty_red_24"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
