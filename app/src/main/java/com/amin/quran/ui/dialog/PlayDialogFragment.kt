@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
+import com.amin.quran.R
 import com.amin.quran.databinding.FragmentDialogPlayBinding
 import com.amin.quran.models.Surah
 import com.amin.quran.utils.showToast
