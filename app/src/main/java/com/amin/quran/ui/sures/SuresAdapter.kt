@@ -1,7 +1,6 @@
 package com.amin.quran.ui.sures
 
 import android.Manifest
-import com.amin.quran.models.SureModel
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.DownloadManager
@@ -12,7 +11,6 @@ import android.net.Uri
 import android.os.Build
 import android.os.Environment
 import android.provider.Settings
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat
@@ -23,9 +21,7 @@ import coil.load
 import com.amin.quran.R
 import com.amin.quran.databinding.ItemRecyclerSureBinding
 import com.amin.quran.models.Surah
-import com.amin.quran.ui.dialog.PlayDialogFragment
 import com.amin.quran.utils.goneWidget
-import com.amin.quran.utils.setMyBackground
 import com.amin.quran.utils.showSnackBarLong
 import com.amin.quran.utils.showSnackBarShort
 import com.amin.quran.utils.showToast

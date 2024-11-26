@@ -1,7 +1,6 @@
-package com.example.panel.local.db
+package com.amin.quran.local
 
 import androidx.room.*
-import com.amin.quran.models.SureModel
 
 @Dao
 interface SureDao {

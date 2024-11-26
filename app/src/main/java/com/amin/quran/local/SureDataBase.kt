@@ -2,6 +2,7 @@ package com.example.panel.local.db
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.amin.quran.local.SureDao
 import com.amin.quran.models.Surah
 
 @Database(entities = [Surah::class] , version = 1 , exportSchema = false)

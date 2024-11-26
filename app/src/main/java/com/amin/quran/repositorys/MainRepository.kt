@@ -1,7 +1,6 @@
 package com.amin.quran.repositorys
 
-import com.amin.quran.models.SureModel
-import com.example.panel.local.db.SureDao
+import com.amin.quran.local.SureDao
 import javax.inject.Inject
 
 class MainRepository @Inject constructor(

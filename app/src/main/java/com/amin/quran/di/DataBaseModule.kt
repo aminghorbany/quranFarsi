@@ -3,7 +3,7 @@ package com.amin.quran.di
 import android.content.Context
 import androidx.room.Room
 import com.amin.quran.utils.Constants
-import com.example.panel.local.db.SureDao
+import com.amin.quran.local.SureDao
 import com.example.panel.local.db.SureDataBase
 import dagger.Module
 import dagger.Provides

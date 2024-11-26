@@ -12,7 +12,6 @@ import androidx.media3.exoplayer.ExoPlayer
 import com.amin.quran.R
 import com.amin.quran.databinding.FragmentDialogPlayBinding
 import com.amin.quran.models.Surah
-import com.amin.quran.utils.showToast
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
@@ -25,7 +24,7 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
     private lateinit var binding: FragmentDialogPlayBinding
     @Inject lateinit var exoPlayer: ExoPlayer
     private var isUserSeeking = false
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentDialogPlayBinding.inflate(layoutInflater)
         return binding.root
     }

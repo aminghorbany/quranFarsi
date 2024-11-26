@@ -10,13 +10,6 @@ import android.os.Parcelable
 
 @Keep
 @Parcelize
-data class SureModel(
-    @SerializedName("surahs")
-    val surahs: List<Surah>
-) : Parcelable
-
-@Keep
-@Parcelize
 @Entity(tableName = Constants.SURE_TABLE)
 data class Surah(
     @SerializedName("name")
