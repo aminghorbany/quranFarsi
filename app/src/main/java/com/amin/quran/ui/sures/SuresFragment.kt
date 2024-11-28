@@ -44,20 +44,14 @@ class SuresFragment : Fragment() {
             }
         }
     }
+
     private fun showPlayDialog(data: Surah) {
-        // حذف دیالوگ قبلی در صورت وجود
+        //delete previous dialog is exist
         playDialog?.dismiss()
         playDialog = null
 
-        // ساخت دیالوگ جدید
+        //create new dialog
         playDialog = PlayDialogFragment.newInstance(data)
         playDialog?.show(childFragmentManager, PlayDialogFragment::class.java.simpleName)
-    }
-
-    override fun onPause() {
-        super.onPause()
-        // بستن دیالوگ هنگام ترک فرگمنت
-        playDialog?.dismiss()
-        playDialog = null
     }
 }

@@ -15,7 +15,6 @@ import javax.inject.Singleton
 object MediaModule {
 
     @Provides
-    @Singleton
     fun provideExoPlayer(@ApplicationContext context: Context): ExoPlayer {
         return ExoPlayer.Builder(context).build()
     }

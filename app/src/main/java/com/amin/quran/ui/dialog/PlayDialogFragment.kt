@@ -46,6 +46,9 @@ class PlayDialogFragment() : BottomSheetDialogFragment(){
     }
 
     private fun initializePlayer(data: Surah) {
+        exoPlayer.stop()
+        exoPlayer.clearMediaItems()
+
         val serverFileName = Uri.parse(data.downloadLink).lastPathSegment
         val filePath = File(Environment.getExternalStoragePublicDirectory(
             Environment.DIRECTORY_DOWNLOADS), "QuranFarsi/$serverFileName")
@@ -127,7 +130,6 @@ class PlayDialogFragment() : BottomSheetDialogFragment(){
     private fun releasePlayer() {
         exoPlayer.stop()
         exoPlayer.clearMediaItems()
-        exoPlayer.release()
     }
 
     override fun onDestroyView() {
