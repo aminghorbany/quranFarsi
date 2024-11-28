@@ -1,5 +1,6 @@
 package com.amin.quran.ui.dialog
 
+import android.content.DialogInterface
 import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
@@ -126,10 +127,16 @@ class PlayDialogFragment() : BottomSheetDialogFragment(){
     private fun releasePlayer() {
         exoPlayer.stop()
         exoPlayer.clearMediaItems()
+        exoPlayer.release()
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
+        releasePlayer()
+    }
+
+    override fun onDismiss(dialog: DialogInterface) {
+        super.onDismiss(dialog)
         releasePlayer()
     }
 
