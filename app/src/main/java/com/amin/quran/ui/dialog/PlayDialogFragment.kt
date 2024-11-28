@@ -19,7 +19,7 @@ import java.util.Locale
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(){
+class PlayDialogFragment() : BottomSheetDialogFragment(){
 
     private lateinit var binding: FragmentDialogPlayBinding
     @Inject lateinit var exoPlayer: ExoPlayer
@@ -32,15 +32,19 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        initializePlayer()
-        setupUI()
+        val surahData = arguments?.getParcelable<Surah>(ARG_SURAH)
+        // نمایش نام سوره
+        surahData?.let {
+            initializePlayer(surahData)
+            setupUI(surahData)
+        }
 
         dialog?.setOnDismissListener {
                 exoPlayer.release()
         }
     }
 
-    private fun initializePlayer() {
+    private fun initializePlayer(data: Surah) {
         val serverFileName = Uri.parse(data.downloadLink).lastPathSegment
         val filePath = File(Environment.getExternalStoragePublicDirectory(
             Environment.DIRECTORY_DOWNLOADS), "QuranFarsi/$serverFileName")
@@ -71,7 +75,7 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
         })
     }
 
-    private fun setupUI() {
+    private fun setupUI(data: Surah) {
         binding.apply {
             txtSureName.text = data.name
 
@@ -127,6 +131,18 @@ class PlayDialogFragment(private val data : Surah ) : BottomSheetDialogFragment(
     override fun onDestroyView() {
         super.onDestroyView()
         releasePlayer()
+    }
+
+    companion object {
+        private const val ARG_SURAH = "arg_surah"
+
+        fun newInstance(data : Surah): PlayDialogFragment {
+            val fragment = PlayDialogFragment()
+            val args = Bundle()
+            args.putParcelable(ARG_SURAH, data)
+            fragment.arguments = args
+            return fragment
+        }
     }
 
 }

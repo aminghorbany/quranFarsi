@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.amin.quran.databinding.FragmentSuresBinding
+import com.amin.quran.models.Surah
 import com.amin.quran.ui.dialog.PlayDialogFragment
 import com.amin.quran.viewmodels.MainViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -20,6 +21,8 @@ class SuresFragment : Fragment() {
     private lateinit var binding: FragmentSuresBinding
     private val viewModel : MainViewModel by viewModels()
     @Inject lateinit var suresAdapter: SuresAdapter
+    private var playDialog: PlayDialogFragment? = null
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentSuresBinding.inflate(layoutInflater)
         return binding.root
@@ -37,8 +40,24 @@ class SuresFragment : Fragment() {
                 }
             }
             suresAdapter.onItemClickListener { selectedItem ->
-                PlayDialogFragment(selectedItem).show(childFragmentManager , PlayDialogFragment(selectedItem).tag)
+                showPlayDialog(selectedItem)
             }
         }
+    }
+    private fun showPlayDialog(data: Surah) {
+        // حذف دیالوگ قبلی در صورت وجود
+        playDialog?.dismiss()
+        playDialog = null
+
+        // ساخت دیالوگ جدید
+        playDialog = PlayDialogFragment.newInstance(data)
+        playDialog?.show(childFragmentManager, PlayDialogFragment::class.java.simpleName)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        // بستن دیالوگ هنگام ترک فرگمنت
+        playDialog?.dismiss()
+        playDialog = null
     }
 }
