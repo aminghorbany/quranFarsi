@@ -29,4 +29,6 @@ data class Surah(
     val downloadLink: String?, // https://sshb.ir/quran/1.mp3
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
+    @SerializedName("isFavorite")
+    var isFavorite : Boolean = false
 ) : Parcelable
