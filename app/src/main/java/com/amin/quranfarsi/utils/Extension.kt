@@ -1,6 +1,9 @@
 package com.amin.quranfarsi.utils
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
@@ -43,6 +46,15 @@ fun Context.goneWidget(view : View){
 
 fun Int.toCommaSeparatedString(): String {
     return "%,d".format(this)
+}
+
+fun Activity.openWebSite(url: String) {
+    if (!url.startsWith("http://") && !url.startsWith("https://")) {
+        Toast.makeText(this, "آدرس وب‌سایت معتبر نیست", Toast.LENGTH_SHORT).show()
+        return
+    }
+    val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    startActivity(intent)
 }
 
 fun RecyclerView.initRecyclerView(layoutManager : LayoutManager , adapter : RecyclerView.Adapter<*>){

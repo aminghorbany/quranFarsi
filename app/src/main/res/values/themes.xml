@@ -35,6 +35,12 @@
         <item name="android:textSize">@dimen/_10ssp</item>
     </style>
 
+    <style name="TextViewLight8" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/chineseBlack</item>
+        <item name="fontFamily">@font/dirooz</item>
+        <item name="android:textSize">@dimen/_8ssp</item>
+    </style>
+
     <style name="Theme.QuranFarsi" parent="Base.Theme.QuranFarsi" />
 
     <style name="textBigSize" parent="Theme.MaterialComponents.DayNight.NoActionBar">
