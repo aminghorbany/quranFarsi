@@ -2,12 +2,14 @@ package com.amin.quranfarsi.models
 
 import android.os.Parcelable
 import androidx.annotation.Keep
+import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.amin.quranfarsi.utils.Constants
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
 
 
-//@Entity(tableName = Constants.SURE_TABLE)
+@Entity(tableName = Constants.SURAH_TABLE)
 @Keep
 @Parcelize
 data class Surah(
