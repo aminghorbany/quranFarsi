@@ -1,0 +1,84 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.QuranFarsi" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue_600</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/chineseBlack</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/blue_600</item>
+        <item name="colorSecondaryVariant">@color/blue_600</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/chineseBlack</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="fontFamily">@font/dirooz</item>
+        <item name="android:layoutDirection">ltr</item>
+    </style>
+
+    <!--TextView-->
+    <style name="TextViewLightStyle" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/chineseBlack</item>
+        <item name="fontFamily">@font/dirooz</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextViewLight12" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/chineseBlack</item>
+        <item name="fontFamily">@font/dirooz</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+    </style>
+
+    <style name="TextViewLight10" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/chineseBlack</item>
+        <item name="fontFamily">@font/dirooz</item>
+        <item name="android:textSize">@dimen/_10ssp</item>
+    </style>
+
+    <style name="Theme.QuranFarsi" parent="Base.Theme.QuranFarsi" />
+
+    <style name="textBigSize" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textSize">@dimen/_18ssp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="textSize17ssp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textSize">@dimen/_17ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSize15ssp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textSize">@dimen/_15ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSize12ssp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSize10sspBlack" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSize8sspBlack" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSize10ssp">
+        <item name="android:textSize">@dimen/_10ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSize8ssp">
+        <item name="android:textSize">@dimen/_8ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="textSize6ssp">
+        <item name="android:textSize">@dimen/_6ssp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sureFragment"
+        android:icon="@drawable/img_quran"
+        android:title="سوره ها" />
+    <item
+        android:id="@+id/favoriteFragment"
+        android:icon="@drawable/ic_favorite_24"
+        android:title="علاقه مندی ها" />
+
+    <item
+        android:id="@+id/infoFragment"
+        android:icon="@drawable/ic_round_info_24"
+        android:title="اطلاعات" />
+</menu>
