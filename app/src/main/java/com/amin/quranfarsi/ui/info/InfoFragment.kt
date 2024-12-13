@@ -25,7 +25,7 @@ class InfoFragment : Fragment() {
             includeMehr.apply {
                 imgSite.load(R.drawable.quranmehr)
                 val url = "https://www.quranmehr.ir"
-                txtSiteInfo.text = "اصوات قرآنی استفاده شده از  منابع موسسه ی مهر و رحمت (ع)"
+                txtSiteInfo.text = "اصوات قرآنی استفاده شده از  منابع موسسه ی پیامبر مهر و رحمت (ع)"
                 txtSiteURL.text = "www.quranmehr.ir"
                 root.setOnClickListener {
                     requireActivity().openWebSite(url)

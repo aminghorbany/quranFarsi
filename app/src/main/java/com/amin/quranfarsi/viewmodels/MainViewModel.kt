@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.amin.quranfarsi.models.Surah
+import com.amin.quranfarsi.repositorys.MainRepository
 import com.google.gson.Gson
 import com.google.gson.JsonObject
 import com.google.gson.reflect.TypeToken
@@ -16,13 +17,14 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(
     application: Application,
-//    private val repo : MainRepository
+    private val repo : MainRepository
 ) : AndroidViewModel(application) {
-    val suresLiveData = MutableLiveData<List<Surah>>()
+    val assetSurahLiveData = MutableLiveData<List<Surah>>()
+    val dbSurahLiveData = MutableLiveData<List<Surah>>()
 
     fun getSuresDataFromAssets() = viewModelScope.launch {
         val result = readSuresFromAsset(getApplication())
-        suresLiveData.postValue(result)
+        assetSurahLiveData.postValue(result)
     }
 
     private fun readSuresFromAsset(context: Context): List<Surah> {
@@ -33,4 +35,12 @@ class MainViewModel @Inject constructor(
         return Gson().fromJson(surahArray, type)
     }
 
+    fun insertAllSurah(surahList: List<Surah>) = viewModelScope.launch {
+        repo.insertAllSurah(surahList)
+    }
+
+    fun getAllSurahList() = viewModelScope.launch {
+        val res = repo.getAllSurahList()
+        dbSurahLiveData.postValue(res)
+    }
 }

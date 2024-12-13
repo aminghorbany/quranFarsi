@@ -24,14 +24,14 @@ class SureFragment : Fragment() {
     private val viewModel : MainViewModel by viewModels()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentSureBinding.inflate(layoutInflater)
-        viewModel.getSuresDataFromAssets()
+        viewModel.getAllSurahList()
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            viewModel.suresLiveData.observe(viewLifecycleOwner){
+            viewModel.dbSurahLiveData.observe(viewLifecycleOwner){
                 sureAdapter.setData(it)
             }
             recyclerSure.apply {
