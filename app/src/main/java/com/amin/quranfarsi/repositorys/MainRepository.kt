@@ -11,4 +11,5 @@ class MainRepository @Inject constructor(
     suspend fun getAllSurahList() = dao.getAllSurahList()
     suspend fun updateSurah(surah: Surah) = dao.updateSurah(surah)
     suspend fun getAllFavoriteSurah() = dao.getAllFavoriteSurah()
+    suspend fun searchSureInfo(query: String) = dao.searchSureInfo(query)
 }

@@ -2,14 +2,19 @@ package com.amin.quranfarsi.ui.sure
 
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
+import com.amin.quranfarsi.R
 import com.amin.quranfarsi.databinding.FragmentSureBinding
 import com.amin.quranfarsi.models.Surah
 import com.amin.quranfarsi.ui.dialog.PlayDialogFragment
@@ -32,7 +37,9 @@ class SureFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
         binding.apply {
+            (activity as AppCompatActivity).setSupportActionBar(sureToolbar)
             viewModel.dbSurahLiveData.observe(viewLifecycleOwner){
                 sureAdapter.setData(it)
             }
@@ -59,6 +66,24 @@ class SureFragment : Fragment() {
                 viewModel.updateSurah(updateSurah)
             }
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_toolbar , menu)
+        val search = menu.findItem(R.id.actionSearch)
+        val searchView = search.actionView as SearchView
+        searchView.queryHint = "جستجو سوره..."
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                viewModel.searchSureInfo(newText ?: "")
+                return true
+            }
+        })
+        return super.onCreateOptionsMenu(menu , inflater)
     }
 
 }
