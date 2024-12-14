@@ -1,5 +1,6 @@
 package com.amin.quranfarsi.ui.dialog
 
+import android.app.Dialog
 import android.content.DialogInterface
 import android.net.Uri
 import android.os.Bundle
@@ -7,6 +8,7 @@ import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.activityViewModels
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
@@ -17,6 +19,7 @@ import com.amin.quranfarsi.models.Surah
 import com.amin.quranfarsi.utils.showShortToast
 import com.amin.quranfarsi.utils.showSnackBarShort
 import com.amin.quranfarsi.viewmodels.MainViewModel
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
@@ -30,6 +33,26 @@ class PlayDialogFragment : BottomSheetDialogFragment(){
     @Inject lateinit var exoPlayer: ExoPlayer
     private var isUserSeeking = false
     private val viewModel : MainViewModel by activityViewModels()
+
+    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
+        val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
+        // Prevent dialog from being dismissed when touching outside
+        dialog.setCancelable(false)
+        dialog.setCanceledOnTouchOutside(false)
+        return dialog
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        // Add back press callback to allow dismissing with back button
+        val callback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                dismiss()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(this, callback)
+    }
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentDialogPlayBinding.inflate(layoutInflater)
         return binding.root
@@ -175,4 +198,5 @@ class PlayDialogFragment : BottomSheetDialogFragment(){
             return fragment
         }
     }
+
 }
