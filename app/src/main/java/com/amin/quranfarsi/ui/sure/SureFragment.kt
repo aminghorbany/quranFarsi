@@ -72,7 +72,7 @@ class SureFragment : Fragment() {
         inflater.inflate(R.menu.menu_toolbar , menu)
         val search = menu.findItem(R.id.actionSearch)
         val searchView = search.actionView as SearchView
-        searchView.queryHint = "جستجو سوره..."
+        searchView.queryHint = "جستجوی سوره..."
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false

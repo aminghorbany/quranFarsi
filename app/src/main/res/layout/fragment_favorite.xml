@@ -6,13 +6,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--Toolbar-->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/sureToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:elevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleCentered="true"
+        app:menu="@menu/menu_toolbar" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerSure"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/sureToolbar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

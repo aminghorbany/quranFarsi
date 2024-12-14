@@ -25,4 +25,7 @@ interface SurahDao {
     @Query("SELECT * FROM surah_table WHERE name LIKE '%' || :query || '%' ")
     suspend fun searchSureInfo(query: String): List<Surah>
 
+    @Query("SELECT * FROM surah_table WHERE name LIKE '%' || :query || '%' AND isFavorite = 1")
+    suspend fun searchFavoriteSureInfo(query: String): List<Surah>
+
 }

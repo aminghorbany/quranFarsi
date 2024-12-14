@@ -54,6 +54,11 @@ class MainViewModel @Inject constructor(
         favoriteSurahLiveData.postValue(res)
     }
 
+    fun searchFavoriteSureInfo(query: String) = viewModelScope.launch {
+        val res = repo.searchFavoriteSureInfo(query)
+        favoriteSurahLiveData.postValue(res)
+    }
+
     fun searchSureInfo(query: String) = viewModelScope.launch {
         val res = repo.searchSureInfo(query)
         dbSurahLiveData.postValue(res)
