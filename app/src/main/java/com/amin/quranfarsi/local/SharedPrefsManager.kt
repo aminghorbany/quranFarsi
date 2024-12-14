@@ -14,15 +14,23 @@ class SharedPrefsManager @Inject constructor(
     private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences("MyAppPrefs", Context.MODE_PRIVATE)
 
-    fun setIsFirstRun(value: Boolean?){
+    fun setIsFirstRun(value: Boolean?) {
         sharedPreferences.edit().apply {
             putBoolean("isFirstRun", value ?: true).apply()
         }
     }
 
-    fun getIsFirstRun() : Boolean{
-        return(
-            sharedPreferences.getBoolean("isFirstRun" , true )
-        )
+    fun getIsFirstRun(): Boolean {
+        return (sharedPreferences.getBoolean("isFirstRun", true))
+    }
+
+    fun setActiveLoop(value: Boolean?) {
+        sharedPreferences.edit().apply {
+            putBoolean("activeLoop", value ?: true).apply()
+        }
+    }
+
+    fun getActiveLoop(): Boolean {
+        return (sharedPreferences.getBoolean("activeLoop", true))
     }
 }

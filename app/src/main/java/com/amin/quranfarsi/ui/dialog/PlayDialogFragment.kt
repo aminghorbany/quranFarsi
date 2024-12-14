@@ -15,6 +15,7 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import com.amin.quranfarsi.R
 import com.amin.quranfarsi.databinding.FragmentDialogPlayBinding
+import com.amin.quranfarsi.local.SharedPrefsManager
 import com.amin.quranfarsi.models.Surah
 import com.amin.quranfarsi.utils.showShortToast
 import com.amin.quranfarsi.utils.showSnackBarShort
@@ -33,7 +34,7 @@ class PlayDialogFragment : BottomSheetDialogFragment(){
     @Inject lateinit var exoPlayer: ExoPlayer
     private var isUserSeeking = false
     private val viewModel : MainViewModel by activityViewModels()
-
+    @Inject lateinit var sharedPrefsManager: SharedPrefsManager
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val dialog = super.onCreateDialog(savedInstanceState) as BottomSheetDialog
         // Prevent dialog from being dismissed when touching outside
@@ -105,9 +106,36 @@ class PlayDialogFragment : BottomSheetDialogFragment(){
         })
     }
 
+    // Helper method to update loop UI based on shared preferences
+    private fun updateLoopUI() {
+        binding.apply {
+            if (sharedPrefsManager.getActiveLoop()){
+                imgReplayOnOff.setImageResource(R.drawable.ic_replay_on)
+                exoPlayer.repeatMode = Player.REPEAT_MODE_ONE
+            }else{
+                imgReplayOnOff.setImageResource(R.drawable.ic_replay_off)
+                exoPlayer.repeatMode = Player.REPEAT_MODE_OFF
+            }
+        }
+    }
+
     private fun setupUI(data: Surah) {
         binding.apply {
             txtSureName.text = data.name
+            // Handle loop state
+            updateLoopUI()
+
+            // Toggle loop state when replay icon is clicked
+            imgReplayOnOff.setOnClickListener {
+                val currentLoopState = sharedPrefsManager.getActiveLoop()
+                sharedPrefsManager.setActiveLoop(!currentLoopState)
+                updateLoopUI()
+                val message = if (!currentLoopState)
+                    "تکرار فعال شد"
+                else
+                    "تکرار غیرفعال شد"
+                root.context.showShortToast(message)
+            }
 
             if (data.isFavorite){
                 imgHeartInPlayer.setImageResource(R.drawable.ic_heart_fill_red_24)
