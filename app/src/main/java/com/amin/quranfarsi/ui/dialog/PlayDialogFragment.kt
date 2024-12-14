@@ -7,12 +7,16 @@ import android.os.Environment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.activityViewModels
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import com.amin.quranfarsi.R
 import com.amin.quranfarsi.databinding.FragmentDialogPlayBinding
 import com.amin.quranfarsi.models.Surah
+import com.amin.quranfarsi.utils.showShortToast
+import com.amin.quranfarsi.utils.showSnackBarShort
+import com.amin.quranfarsi.viewmodels.MainViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
@@ -25,6 +29,7 @@ class PlayDialogFragment : BottomSheetDialogFragment(){
     private lateinit var binding: FragmentDialogPlayBinding
     @Inject lateinit var exoPlayer: ExoPlayer
     private var isUserSeeking = false
+    private val viewModel : MainViewModel by activityViewModels()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binding = FragmentDialogPlayBinding.inflate(layoutInflater)
         return binding.root
@@ -80,6 +85,29 @@ class PlayDialogFragment : BottomSheetDialogFragment(){
     private fun setupUI(data: Surah) {
         binding.apply {
             txtSureName.text = data.name
+
+            if (data.isFavorite){
+                imgHeartInPlayer.setImageResource(R.drawable.ic_heart_fill_red_24)
+            } else {
+                imgHeartInPlayer.setImageResource(R.drawable.ic_heart_empty_red_24)
+            }
+            binding.imgHeartInPlayer.setOnClickListener {
+                data.isFavorite = !data.isFavorite
+                val iconRes = if (data.isFavorite) R.drawable.ic_heart_fill_red_24 else R.drawable.ic_heart_empty_red_24
+                imgHeartInPlayer.setImageResource(iconRes)
+                val message = if (data.isFavorite)"به علاقه مندی ها اضافه شد" else "از علاقه مندی ها حذف شد"
+                val updateSurah = Surah(data.name ,
+                    data.transliteration ,
+                    data.englishName ,
+                    data.persianTranslation ,
+                    data.ayahs ,
+                    data.place ,
+                    data.downloadLink ,
+                    data.id ,
+                    data.isFavorite)
+                viewModel.updateSurah(updateSurah)
+                root.context.showShortToast(message)
+            }
 
             imgPlayAndPause.setOnClickListener {
                 if (exoPlayer.isPlaying) {
