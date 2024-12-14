@@ -100,14 +100,14 @@ class SureAdapter @Inject constructor() : RecyclerView.Adapter<SureAdapter.SureV
                     }
                 }
                 if (item.isFavorite){
-                    imgAddToFavorite.setBackgroundResource(R.drawable.ic_heart_fill_red_24)
+                    imgAddToFavorite.setImageResource(R.drawable.ic_heart_fill_red_24)
                 } else {
-                    imgAddToFavorite.setBackgroundResource(R.drawable.ic_heart_empty_red_24)
+                    imgAddToFavorite.setImageResource(R.drawable.ic_heart_empty_red_24)
                 }
                 binding.imgAddToFavorite.setOnClickListener {
                     item.isFavorite = !item.isFavorite
                     val iconRes = if (item.isFavorite) R.drawable.ic_heart_fill_red_24 else R.drawable.ic_heart_empty_red_24
-                    it.setBackgroundResource(iconRes)
+                    imgAddToFavorite.setImageResource(iconRes)
                     onFavoriteItemClick?.invoke(Pair(item , item.isFavorite))
                     val message = if (item.isFavorite)"به علاقه مندی ها اضافه شد" else "از علاقه مندی ها حذف شد"
                     root.context.showSnackBarShort(message, binding.root, "باشه")

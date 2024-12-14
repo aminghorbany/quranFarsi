@@ -120,7 +120,7 @@
         <ImageView
             android:id="@+id/imgDownload"
             android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
+            android:layout_height="0dp"
             android:src="@drawable/ic_download"
             android:layout_marginLeft="@dimen/_10sdp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -130,12 +130,12 @@
         <ImageView
             android:id="@+id/imgAddToFavorite"
             android:layout_width="@dimen/_20sdp"
-            android:layout_height="@dimen/_20sdp"
+            android:layout_height="0dp"
             android:layout_marginLeft="@dimen/_10sdp"
             android:src="@drawable/ic_heart_empty_red_24"
-            app:layout_constraintBottom_toBottomOf="@+id/imgDownload"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/imgDownload"
+            app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/red_900" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
