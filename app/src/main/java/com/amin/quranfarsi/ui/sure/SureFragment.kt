@@ -5,11 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.LayoutManager
 import com.amin.quranfarsi.databinding.FragmentSureBinding
+import com.amin.quranfarsi.models.Surah
 import com.amin.quranfarsi.ui.dialog.PlayDialogFragment
 import com.amin.quranfarsi.ui.sure.adapter.SureAdapter
 import com.amin.quranfarsi.utils.showShortToast
@@ -21,7 +23,7 @@ import javax.inject.Inject
 class SureFragment : Fragment() {
     private lateinit var binding: FragmentSureBinding
     @Inject lateinit var sureAdapter: SureAdapter
-    private val viewModel : MainViewModel by viewModels()
+    private val viewModel : MainViewModel by activityViewModels()
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentSureBinding.inflate(layoutInflater)
         viewModel.getAllSurahList()
@@ -42,6 +44,19 @@ class SureFragment : Fragment() {
             sureAdapter.onItemClickListener {
                 val dialog = PlayDialogFragment.newInstance(it)
                 dialog.show(childFragmentManager, PlayDialogFragment().tag)
+            }
+
+            sureAdapter.onFavoriteItemClickListener {
+                val updateSurah = Surah(it.first.name ,
+                    it.first.transliteration ,
+                    it.first.englishName ,
+                    it.first.persianTranslation ,
+                    it.first.ayahs ,
+                    it.first.place ,
+                    it.first.downloadLink ,
+                    it.first.id ,
+                    it.second)
+                viewModel.updateSurah(updateSurah)
             }
         }
     }

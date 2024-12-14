@@ -16,10 +16,10 @@ interface SurahDao {
     @Query("select * from surah_table")
     suspend fun getAllSurahList() : List<Surah>
 
-//    @Insert(onConflict = OnConflictStrategy.REPLACE)
-//    suspend fun insertAllWords(data : List<DictionaryEntity>)
-//
-//    @Update
-//    suspend fun updateWord(dictionaryEntry: DictionaryEntity)
+    @Update
+    suspend fun updateSurah(surah: Surah)
+
+    @Query("select * from surah_table where isFavorite = 1")
+    suspend fun getAllFavoriteSurah() : List<Surah>
 
 }

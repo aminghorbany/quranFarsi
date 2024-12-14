@@ -26,6 +26,7 @@ import com.amin.quranfarsi.utils.showShortToast
 import com.amin.quranfarsi.utils.showSnackBarLong
 import com.amin.quranfarsi.utils.showSnackBarShort
 import com.amin.quranfarsi.utils.showWidget
+import com.amin.quranfarsi.viewmodels.MainViewModel
 import java.io.File
 import javax.inject.Inject
 
@@ -33,6 +34,7 @@ class SureAdapter @Inject constructor() : RecyclerView.Adapter<SureAdapter.SureV
 
     private var sureList = emptyList<Surah>()
     private var onItemClick: ((Surah) -> Unit)? = null
+    private var onFavoriteItemClick: ((Pair<Surah , Boolean>) -> Unit)? = null
 
     fun setData(data: List<Surah>) {
         val diffUtil = DiffUtil.calculateDiff(WordsDiffUtils(sureList, data))
@@ -42,6 +44,10 @@ class SureAdapter @Inject constructor() : RecyclerView.Adapter<SureAdapter.SureV
 
     fun onItemClickListener(listener: (Surah) -> Unit) {
         onItemClick = listener
+    }
+
+    fun onFavoriteItemClickListener(listener: (Pair<Surah , Boolean>) -> Unit) {
+        onFavoriteItemClick = listener
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SureViewHolder {
@@ -93,12 +99,17 @@ class SureAdapter @Inject constructor() : RecyclerView.Adapter<SureAdapter.SureV
                         }
                     }
                 }
-                var isFavorite = false
+                if (item.isFavorite){
+                    imgAddToFavorite.setBackgroundResource(R.drawable.ic_heart_fill_red_24)
+                } else {
+                    imgAddToFavorite.setBackgroundResource(R.drawable.ic_heart_empty_red_24)
+                }
                 binding.imgAddToFavorite.setOnClickListener {
-                    isFavorite = !isFavorite
-                    val iconRes = if (isFavorite) R.drawable.ic_heart_fill_red_24 else R.drawable.ic_heart_empty_red_24
+                    item.isFavorite = !item.isFavorite
+                    val iconRes = if (item.isFavorite) R.drawable.ic_heart_fill_red_24 else R.drawable.ic_heart_empty_red_24
                     it.setBackgroundResource(iconRes)
-                    val message = if (isFavorite)"به علاقه مندی ها اضافه شد" else "از علاقه مندی ها حذف شد"
+                    onFavoriteItemClick?.invoke(Pair(item , item.isFavorite))
+                    val message = if (item.isFavorite)"به علاقه مندی ها اضافه شد" else "از علاقه مندی ها حذف شد"
                     root.context.showSnackBarShort(message, binding.root, "باشه")
                 }
                 if (item.place == "Mecca"){

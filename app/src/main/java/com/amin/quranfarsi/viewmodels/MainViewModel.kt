@@ -21,6 +21,7 @@ class MainViewModel @Inject constructor(
 ) : AndroidViewModel(application) {
     val assetSurahLiveData = MutableLiveData<List<Surah>>()
     val dbSurahLiveData = MutableLiveData<List<Surah>>()
+    val favoriteSurahLiveData = MutableLiveData<List<Surah>>()
 
     fun getSuresDataFromAssets() = viewModelScope.launch {
         val result = readSuresFromAsset(getApplication())
@@ -42,5 +43,14 @@ class MainViewModel @Inject constructor(
     fun getAllSurahList() = viewModelScope.launch {
         val res = repo.getAllSurahList()
         dbSurahLiveData.postValue(res)
+    }
+
+    fun updateSurah(surah: Surah) = viewModelScope.launch {
+        repo.updateSurah(surah)
+    }
+
+    fun getAllFavoriteSurah() = viewModelScope.launch {
+        val res = repo.getAllFavoriteSurah()
+        favoriteSurahLiveData.postValue(res)
     }
 }
