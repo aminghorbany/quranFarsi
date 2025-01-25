@@ -11,8 +11,8 @@
 
     <item
         android:id="@+id/actionExport"
-        android:icon="@drawable/github"
-        android:title="خروجی نهایی"
+        android:icon="@drawable/ic_rate"
+        android:title="امتیاز به برنامه"
         app:iconTint="@color/black"
         app:showAsAction="always" />
 
